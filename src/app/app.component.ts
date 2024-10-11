@@ -5,7 +5,8 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet],
-  template: `<router-outlet />`,
+  templateUrl: './app.component.html',
+  // template: `<router-outlet />`,
   styles: `
     :host {
       max-width: 1280px;
@@ -15,4 +16,9 @@ import { RouterOutlet } from '@angular/router';
     }
   `,
 })
-export class AppComponent {}
+export class AppComponent {
+
+  uncovered() {
+    throw new Error('me');
+  }
+}
